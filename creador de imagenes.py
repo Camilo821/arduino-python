@@ -3,8 +3,9 @@ import numpy as np
 import imutils
 import os
 import serial, time
-#arduino = serial.Serial("COM10", 9600)
-Datos = 'n'
+
+
+Datos = 'p'
 if not os.path.exists(Datos):
 	print('Carpeta creada: ', Datos)
 	os.makedirs(Datos)
@@ -14,9 +15,8 @@ cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
 x1, y1 = 190, 80
 x2, y2 = 450, 398
 
-count = 0
+count = 55
 while True:
-
 	ret, frame = cap.read()
 	if ret == False:  break
 	imAux = frame.copy()
@@ -39,10 +39,3 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-
-#while True:
-#    val = input("Ingrese una letra")
-#    if val == "a":
-#        arduino.write(b'a')
-#    if val == "b":
-#        arduino.write(b'b')
