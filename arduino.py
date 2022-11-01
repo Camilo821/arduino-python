@@ -1,6 +1,10 @@
 import serial, time
+import numpy as np
 
-arduino = serial.Serial("COM12", 9600)
+arduino = serial.Serial("COM10", 9600)
+
+
+
 
 while True:
     val = input("Ingrese una letra")
