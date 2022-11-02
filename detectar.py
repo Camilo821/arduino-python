@@ -12,7 +12,7 @@ while True:
 	toy = capacitor.detectMultiScale(gray,
 	scaleFactor = 5,
 	minNeighbors = 91,
-	minSize=(20,25))
+	minSize=(70,78))
 
 	for (x,y,w,h) in toy:
 		cv2.rectangle(frame, (x,y),(x+w,y+h),(0,255,0),2)
